@@ -126,7 +126,7 @@ teleport-platform="cameraRig:#camera-rig;
     material = "color: red;transparent:true"
     position="0 5 -10" radius="1"  scale ="1 1 1"
 
-    animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 1500; from: 1 1 1; to: 0.3 0.3 0.3"
+    animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 1500; from: 1 1 1; to: 0.2 0.2 0.2"
     animation__mouseleave="property: scale; startEvents: mouseleave; easing: easeInCubic; dur: 1500; to: 1 1 1"
     animation__click="property:components.material.material.opacity; to: 0.0; startEvents: click; easing: easeInCubic; dur: 1500;">
 
@@ -140,15 +140,10 @@ teleport-platform="cameraRig:#camera-rig;
     geometry ="primitive: sphere"
     material = "color: red;transparent:true"
     position="5 5 -10" radius="1"  scale ="1 1 1"
-    animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 1500; from: 1 1 1; to: 0.3 0.3 0.3"
+    animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 1500; from: 1 1 1; to: 0.2 0.2 0.2"
     animation__mouseleave="property: scale; startEvents: mouseleave; easing: easeInCubic; dur: 1500; to: 1 1 1"
     animation__click="property:components.material.material.opacity;  to: 0.0; startEvents: click; easing: easeInCubic; dur: 1500;">
  </a-entity>
-
-<!--------------------------------------------------------------------------------------------------------------->
-<!--------------------------------------------------------------------------------------------------------------->
-
-
 
    <!-- Sphere 3 -->
   <a-entity 
@@ -157,29 +152,35 @@ teleport-platform="cameraRig:#camera-rig;
    geometry ="primitive: sphere"
    material = "color: red;transparent:true"
    position="10 5 -10" radius="1"  scale ="1 1 1"
-   animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 1500; from: 1 1 1; to: 0.3 0.3 0.3"
+   animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 1500; from: 1 1 1; to: 0.2 0.2 0.2"
    animation__mouseleave="property: scale; startEvents: mouseleave; easing: easeInCubic; dur: 1500; to: 1 1 1"
    animation__click="property:components.material.material.opacity; to: 0.0; startEvents: click; easing: easeInCubic; dur: 1500;">
  </a-entity>
 
-        <!-- Phyllotaxis -->
-       <a-entity phyllotaxis="angle:137.3;
-                             mode:1"
-                position ="0 5 -16" 
-                rotation ="0 0 0">
-     </a-entity>
+ <!--------------------------------------------------------------------------------------------------------------->
+<!------------------------------------------Phyllotaxis---------------------------------------------------------->
 
-    <!-- <a-entity phyllotaxis="angle:137.5;
+<!-- Phyllotaxis -->
+<a-entity phyllotaxis="angle:137.3;
+                             mode:1"
+          plx-activate="sphere:#sphere1"
+          position ="0 5 -10" 
+          rotation ="0 0 0">
+</a-entity>
+
+   <a-entity phyllotaxis="angle:137.5;
                             mode:1"
-                position ="0, 6, -5" 
+                   plx-activate="sphere:#sphere2"
+                position ="5, 5, -10" 
                 rotation ="0 0 0">
      </a-entity>
 
      <a-entity phyllotaxis="angle:137.6;
                             mode:1"
-                position ="14, 6, -5" 
+                  plx-activate="sphere:#sphere3"
+                position ="10, 5, -10" 
                 rotation ="0 0 0">
-     </a-entity> -->     
+     </a-entity>     
         
     </a-scene>
       

@@ -5,19 +5,19 @@ AFRAME.registerComponent('color-change', {
   
     //init runs once 
     init: function () {
-        var self = this;
+       //listens to event emitted from teleport platform
         this.el.addEventListener('colorChange',function(evt){
-            console.log(evt.detail.color);
+            
             this.setAttribute('material', 'color', evt.detail.color);
-
+            if(evt.detail.color == "red"){
+                console.log("deactivate",this.getAttribute('id'));
+                this.emit('deactivate');
+                //entity.emit('activate');
+                
+            }
+            
         })
     
     
     },
-  
-    //tick runs continuously, useful for animation
-    tick: function (time, timeDelta) { 
-     
-    
-    }
   });
